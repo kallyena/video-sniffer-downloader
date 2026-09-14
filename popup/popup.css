@@ -1,0 +1,303 @@
+/* 视频嗅探下载器 Popup 样式 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  width: 400px;
+  font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+  font-size: 13px;
+  color: #1f2937;
+  background: #f3f4f6;
+}
+
+/* ---------- 头部 ---------- */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: linear-gradient(135deg, #1e5aeb, #14aa9c);
+  color: #fff;
+}
+.header .logo { width: 22px; height: 22px; }
+.header h1 { flex: 1; font-size: 14px; font-weight: 600; }
+
+.icon-btn {
+  padding: 4px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+.icon-btn:hover { background: rgba(255, 255, 255, 0.3); }
+.icon-btn.primary { background: rgba(255, 255, 255, 0.9); color: #1e5aeb; border-color: transparent; }
+.icon-btn.primary:hover { background: #fff; }
+
+/* ---------- 主体 ---------- */
+.main { padding: 10px 12px 4px; }
+
+.page-title {
+  margin-bottom: 8px;
+  padding: 6px 10px;
+  background: #eef2ff;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #3730a3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.section { margin-bottom: 10px; }
+.section-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.count {
+  padding: 0 6px;
+  border-radius: 8px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 11px;
+}
+
+.empty {
+  padding: 14px;
+  text-align: center;
+  color: #9ca3af;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px dashed #d1d5db;
+}
+.empty small { font-size: 11px; }
+
+/* ---------- 视频列表 ---------- */
+.video-list { display: flex; flex-direction: column; gap: 8px; }
+
+.video-item {
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.video-item .row-top {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.badge {
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  flex-shrink: 0;
+}
+.badge.m3u8 { background: #f59e0b; }
+.badge.direct { background: #3b82f6; }
+.badge.blob { background: #8b5cf6; }
+.badge.audio { background: #64748b; }
+.badge.video { background: #dc2626; }
+.badge.dash { background: #0d9488; }
+
+.video-url {
+  flex: 1;
+  font-size: 11px;
+  color: #6b7280;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: rtl; /* 长地址从尾部截断更易辨识 */
+  text-align: left;
+}
+
+.video-meta { font-size: 11px; color: #9ca3af; margin-bottom: 6px; }
+
+.video-item .row-bottom {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.name-input {
+  flex: 1;
+  padding: 5px 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 12px;
+  outline: none;
+}
+.name-input:focus { border-color: #2563eb; box-shadow: 0 0 0 2px #dbeafe; }
+
+.btn {
+  padding: 5px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.btn.download { background: #2563eb; color: #fff; }
+.btn.download:hover { background: #1d4ed8; }
+.btn.link { background: #f3f4f6; color: #374151; border: 1px solid #d1d5db; }
+.btn.link:hover { background: #e5e7eb; }
+
+/* ---------- 快捷设置 ---------- */
+.quick-settings {
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.switch-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #374151;
+}
+.switch-label input { accent-color: #2563eb; width: 15px; height: 15px; }
+
+/* ---------- 任务列表 ---------- */
+.task-list { display: flex; flex-direction: column; gap: 8px; }
+
+.task-item {
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.task-item .row-top {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+.task-name {
+  flex: 1;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.status {
+  font-size: 10px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.status.downloading { background: #dbeafe; color: #1d4ed8; }
+.status.merging { background: #fef3c7; color: #b45309; }
+.status.pending { background: #e5e7eb; color: #6b7280; }
+.status.completed { background: #dcfce7; color: #15803d; }
+.status.failed { background: #fee2e2; color: #b91c1c; }
+.status.canceled { background: #f3f4f6; color: #6b7280; }
+
+.progress-track {
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #2563eb, #14aa9c);
+  border-radius: 3px;
+  transition: width 0.3s;
+}
+
+.task-item .row-bottom {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #6b7280;
+}
+.task-detail { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* 失败原因：独立一行、可换行完整展示 */
+.task-error-line {
+  margin-top: 5px;
+  color: #b91c1c;
+  font-size: 11px;
+  line-height: 1.5;
+  word-break: break-all;
+}
+
+.btn.mini { padding: 2px 8px; font-size: 11px; }
+.btn.cancel { background: #fee2e2; color: #b91c1c; }
+.btn.cancel:hover { background: #fecaca; }
+.btn.retry { background: #dbeafe; color: #1d4ed8; }
+.btn.retry:hover { background: #bfdbfe; }
+.btn.remove { background: #f3f4f6; color: #6b7280; border: 1px solid #d1d5db; }
+.btn.remove:hover { background: #e5e7eb; color: #374151; }
+
+/* 任务区标题右侧的清空按钮 */
+.clear-btn {
+  margin-left: auto;
+  padding: 1px 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background: #fff;
+  color: #6b7280;
+  font-size: 11px;
+  cursor: pointer;
+}
+.clear-btn:hover { background: #f3f4f6; color: #b91c1c; border-color: #fca5a5; }
+
+/* ---------- 底部与提示 ---------- */
+.footer {
+  padding: 8px 12px 7px;
+  font-size: 11px;
+  color: #6b7280;
+  background: #e5e7eb;
+}
+.save-path {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.footer-links {
+  display: flex;
+  gap: 14px;
+  margin-top: 5px;
+}
+.footer-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #2563eb;
+  font-size: 11px;
+  cursor: pointer;
+}
+.footer-link:hover { text-decoration: underline; }
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  padding: 8px 16px;
+  background: rgba(17, 24, 39, 0.85);
+  color: #fff;
+  border-radius: 6px;
+  font-size: 12px;
+  z-index: 10;
+  transition: opacity 0.2s;
+}

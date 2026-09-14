@@ -1,0 +1,120 @@
+/* 设置页样式 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+  font-size: 14px;
+  color: #1f2937;
+  background: #f3f4f6;
+}
+
+.container {
+  max-width: 680px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #111827;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  font-size: 15px;
+  margin-bottom: 14px;
+  color: #1e5aeb;
+}
+
+.field { margin-bottom: 16px; }
+.field:last-child { margin-bottom: 0; }
+
+.field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.field input[type="text"],
+.field select {
+  width: 100%;
+  max-width: 320px;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 13px;
+  outline: none;
+}
+.field input[type="text"]:focus,
+.field select:focus { border-color: #2563eb; box-shadow: 0 0 0 2px #dbeafe; }
+
+.field input[type="range"] { width: 100%; max-width: 320px; accent-color: #2563eb; }
+
+.hint {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.switch-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+}
+.switch-label input { accent-color: #2563eb; width: 16px; height: 16px; }
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.btn {
+  padding: 8px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.btn.primary { background: #2563eb; color: #fff; }
+.btn.primary:hover { background: #1d4ed8; }
+
+.save-status { font-size: 13px; color: #15803d; }
+
+.tips ul {
+  padding-left: 18px;
+  font-size: 13px;
+  color: #374151;
+  line-height: 1.9;
+}
+
+/* 关于与支持 */
+.about-version { font-size: 13px; color: #374151; margin-bottom: 10px; }
+.about-version span { color: #1e5aeb; font-weight: 600; }
+
+.about-links { display: flex; gap: 18px; margin-bottom: 12px; }
+.about-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #2563eb;
+  font-size: 13px;
+  cursor: pointer;
+}
+.about-link:hover { text-decoration: underline; }
+
+.about .legal { color: #9ca3af; }

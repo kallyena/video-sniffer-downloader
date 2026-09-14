@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>视频嗅探下载器 - 设置</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <h1>视频嗅探下载器 · 设置</h1>
+
+    <section class="card">
+      <h2>保存位置</h2>
+      <div class="field">
+        <label for="opt-root-dir">下载根目录名</label>
+        <input type="text" id="opt-root-dir" placeholder="VideoDownloader">
+        <p class="hint">
+          所有视频保存在「浏览器默认下载目录 / 根目录 / 视频文件名 /」下，
+          该视频的合并文件、分片等全部存放于此目录。浏览器限制：只能在默认下载目录内指定子目录。
+        </p>
+      </div>
+      <div class="field">
+        <label for="opt-name-source">默认文件名来源</label>
+        <select id="opt-name-source">
+          <option value="title">网页标题（推荐）</option>
+          <option value="url">视频地址中的文件名</option>
+        </select>
+        <p class="hint">下载时可在弹窗中手动修改每个视频的文件名。</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>下载与合并</h2>
+      <div class="field">
+        <label class="switch-label">
+          <input type="checkbox" id="opt-auto-merge">
+          <span>下载完成后自动合并为单个视频文件</span>
+        </label>
+        <p class="hint">
+          TS 切片直接拼接为 .ts，fMP4 切片拼接为 .mp4，主流播放器均可直接播放，无需转码。
+        </p>
+      </div>
+      <div class="field">
+        <label class="switch-label">
+          <input type="checkbox" id="opt-keep-segments">
+          <span>同时保留分片文件（segments 子目录）</span>
+        </label>
+        <p class="hint">
+          保留所有原始切片，并自动生成 filelist.txt 与「合并说明.txt」（内含 ffmpeg 无损合并命令），
+          便于手动合并或转封装为其它格式。注意：分片数量多时会产生大量下载记录。
+        </p>
+      </div>
+      <div class="field">
+        <label for="opt-concurrency">分片并发下载数：<span id="concurrency-value">3</span></label>
+        <input type="range" id="opt-concurrency" min="1" max="10" step="1" value="3">
+        <p class="hint">并发越高下载越快，但过高可能触发站点限流，建议 3~5。</p>
+      </div>
+    </section>
+
+    <div class="actions">
+      <button id="btn-save" class="btn primary">保存设置</button>
+      <span id="save-status" class="save-status"></span>
+    </div>
+
+    <section class="card tips">
+      <h2>使用提示</h2>
+      <ul>
+        <li>打开含视频的网页并<b>播放视频</b>，插件会自动嗅探 m3u8 / mp4 / blob 等资源。</li>
+        <li>MSE 动态流（blob 地址无法直接读取）请先播放视频，再从列表下载嗅探到的 m3u8 清单。</li>
+        <li>HLS 加密视频（AES-128）会自动解密后合并，无需额外操作。</li>
+        <li>直播流仅能录制已生成的片段，建议先播放一段时间再下载。</li>
+        <li>下载中断后可点击"重试"断点续传（已完成分片不会重复下载）。</li>
+      </ul>
+    </section>
+
+    <section class="card about">
+      <h2>关于与支持</h2>
+      <div class="about-version">当前版本 <span id="about-version"></span>（完全免费）</div>
+      <div class="about-links">
+        <button id="about-donate" class="about-link">资助开发</button>
+        <button id="about-github" class="about-link">GitHub 主页</button>
+        <button id="about-feedback" class="about-link">反馈与求适配</button>
+      </div>
+      <p class="hint">
+        本插件永久免费。如果你的常用网站无法下载，欢迎通过"反馈与求适配"告诉我们，
+        呼声较高的站点会在后续版本中优先适配。
+      </p>
+      <p class="hint legal">
+        合规提示：本插件仅用于个人学习与备份用途，请勿下载、传播受版权保护的内容，
+        亦不得用于任何商业用途。DRM 加密内容（会员付费视频等）不在支持范围内。
+      </p>
+    </section>
+  </div>
+  <script type="module" src="options.js"></script>
+</body>
+</html>

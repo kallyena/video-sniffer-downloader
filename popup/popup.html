@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="header">
+    <img src="../icons/icon48.png" alt="" class="logo">
+    <h1>视频嗅探下载器</h1>
+    <button id="btn-options" class="icon-btn" title="更多设置">设置</button>
+    <button id="btn-rescan" class="icon-btn primary" title="重新扫描页面视频">重新嗅探</button>
+  </header>
+
+  <main class="main">
+    <div id="page-title" class="page-title" title=""></div>
+
+    <section class="section">
+      <h2 class="section-title">检测到的视频 <span id="video-count" class="count"></span></h2>
+      <div id="video-list" class="video-list"></div>
+      <div id="video-empty" class="empty">
+        未检测到视频<br>
+        <small>请先播放视频，再点击"重新嗅探"按钮</small>
+      </div>
+    </section>
+
+    <section class="section quick-settings">
+      <label class="switch-label">
+        <input type="checkbox" id="qs-auto-merge">
+        <span>下载后自动合并为单文件</span>
+      </label>
+      <label class="switch-label">
+        <input type="checkbox" id="qs-keep-segments">
+        <span>同时保留分片文件</span>
+      </label>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">
+        下载任务
+        <button id="btn-clear-tasks" class="clear-btn" title="清除所有已完成/失败/已取消的任务记录">清空记录</button>
+      </h2>
+      <div id="task-list" class="task-list"></div>
+      <div id="task-empty" class="empty">暂无下载任务</div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div id="save-path" class="save-path" title=""></div>
+    <div class="footer-links">
+      <button id="link-donate" class="footer-link" title="插件完全免费，资助是自愿的">资助开发</button>
+      <button id="link-feedback" class="footer-link" title="支持的网站无法下载？点这里告诉我">反馈与求适配</button>
+    </div>
+  </footer>
+  <div id="toast" class="toast" hidden></div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
