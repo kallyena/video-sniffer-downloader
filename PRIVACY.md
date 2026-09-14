@@ -50,5 +50,5 @@
 
 ## 联系方式
 
-- GitHub Issues：https://github.com/your-name/video-sniffer-downloader/issues
-- 邮箱：your-email@example.com
+- GitHub Issues：https://github.com/kallyena/video-sniffer-downloader/issues
+- 邮箱：kallyena@163.com

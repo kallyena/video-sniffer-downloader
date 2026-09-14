@@ -76,9 +76,9 @@ ffmpeg -i "标题-视频流.m4s" -i "标题-音频流.m4s" -c copy "标题.mp4"
 
 ## 资助
 
-插件永久免费。如果它帮到了你，欢迎[资助开发](https://afdian.net/your-page)——这将支持新站点适配与功能迭代。
+插件永久免费。如果它帮到了你，欢迎[资助开发](https://afdian.com/a/kallyena01)——这将支持新站点适配与功能迭代。
 
 ## 反馈与求适配
 
-- [GitHub Issues](https://github.com/your-name/video-sniffer-downloader/issues/new)
+- [GitHub Issues](https://github.com/kallyena/video-sniffer-downloader/issues/1)
 - 插件弹窗底部"反馈与求适配"（自动附带诊断信息）

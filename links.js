@@ -6,8 +6,8 @@
 // 4. feedbackEmail  反馈邮箱（用于未登录 GitHub 的用户，任意常用邮箱即可）
 
 export const LINKS = {
-  donate: 'https://afdian.net/your-page',
-  github: 'https://github.com/your-name/video-sniffer-downloader',
-  issues: 'https://github.com/your-name/video-sniffer-downloader/issues/new',
-  feedbackEmail: 'your-email@example.com'
+  donate: 'https://afdian.com/a/kallyena01',
+  github: 'https://github.com/kallyena/video-sniffer-downloader',
+  issues: 'https://github.com/kallyena/video-sniffer-downloader/issues/new',
+  feedbackEmail: 'kallyena@163.com'
 };
